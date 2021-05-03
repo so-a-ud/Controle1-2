@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-6 offset-3">
+        <form [formGroup]='carsForm'>
+          <div class="form-group">
+            <label>Marque</label>
+            <input type="text" class="form-control" [formControl]='marque_Voiture'>
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="marque_Voiture.invalid && marque_Voiture.touched">
+            **Votre Nom est Obligatoire
+          </div>
+          <div class="form-group">
+            <label>N° immatricule</label>
+            <input type="text" class="form-control" [formControl]='n_immatricule'>
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="n_immatricule.invalid && n_immatricule.touched">
+            **Votre N° immatricule  est Obligatoire
+          </div>
+          <div class="form-group">
+            <label>Nombre de siege</label>
+            <input type="email" class="form-control" [formControl]='nbr_siege'>
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="nbr_siege.invalid && nbr_siege.touched">
+            **Votre Nombre de siege Obligatoire
+          </div>
+          <div class="form-group">
+            <label>Couleur</label>
+            <input type="email" class="form-control" [formControl]='couleur_voiture'>
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="couleur_voiture.invalid && couleur_voiture.touched">
+            **Votre couleur est Obligatoire
+          </div>
+          
+  
+          <button type="submit" class="btn btn-primary" (click)='onCreate()' [disabled]="carsForm.invalid">Creer</button>
+        </form>
+        
+       
+      </div>
+    </div>
+  </div>

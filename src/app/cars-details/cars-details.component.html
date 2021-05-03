@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>marque de Voiture</th>
+        <th>N0 ommatrucule</th>
+        <th>Nobmbre de siges</th>
+        <th>Couleur</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cars of cars">
+        <td>{{cars.marque_Voiture}}</td>
+        <td>{{cars.n_immatricule}}</td>
+        <td>{{cars.nbr_siege}}</td>
+        <td>{{cars.couleur_voiture}}</td>
+        
+      </tr>      
+    </tbody>
+  </table>
